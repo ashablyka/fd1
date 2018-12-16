@@ -1,0 +1,217 @@
+ashablyka:~/workspace (master) $ git remote add origin https://github.com/ashablyka/fd1
+ashablyka:~/workspace (master) $ git remote -v
+origin  https://github.com/ashablyka/fd1 (fetch)
+origin  https://github.com/ashablyka/fd1 (push)
+ashablyka:~/workspace (master) $ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ChessBoard.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ashablyka:~/workspace (master) $ git add ChessBoard.html 
+ashablyka:~/workspace (master) $ git commit -m 'Chessboard2'
+[master b1ae656] Chessboard2
+ 1 file changed, 204 insertions(+), 136 deletions(-)
+ rewrite ChessBoard.html (91%)
+ashablyka:~/workspace (master) $ git status
+On branch master
+nothing to commit, working tree clean
+ashablyka:~/workspace (master) $ git push origin master
+Username for 'https://github.com': ashablyka
+Password for 'https://ashablyka@github.com': 
+Counting objects: 22, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (22/22), 19.02 KiB | 4.75 MiB/s, done.
+Total 22 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas: 100% (7/7), done.
+To https://github.com/ashablyka/fd1
+ * [new branch]      master -> master
+ashablyka:~/workspace (master) $ git branch
+* master
+ashablyka:~/workspace (master) $ git branch one
+ashablyka:~/workspace (master) $ git branch
+* master
+  one
+ashablyka:~/workspace (master) $ git status
+On branch master
+nothing to commit, working tree clean
+ashablyka:~/workspace (master) $ git checkout one
+Switched to branch 'one'
+ashablyka:~/workspace (one) $ git branch
+  master
+* one
+ashablyka:~/workspace (one) $ git status
+On branch one
+nothing to commit, working tree clean
+ashablyka:~/workspace (one) $ touch branch 
+                                           ashablyka:~/workspace (one) $ touch branchone.txt
+ashablyka:~/workspace (one) $ git status
+On branch one
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        branchone.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+ashablyka:~/workspace (one) $ git add branchone.txt
+ashablyka:~/workspace (one) $ git commit -m 'коммит branchone.txt'
+[one 97869a2] коммит branchone.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 branchone.txt
+ashablyka:~/workspace (one) $ git log
+commit 97869a27235a24b9a89c8cf1634c04bacbf93cb0 (HEAD -> one)
+Author: Andrei Shablyka <an.shablyka@gmail.com>
+Date:   Fri Dec 14 05:53:39 2018 +0000
+
+    коммит branchone.txt
+
+commit b1ae6562c1b7f447fe41ad547206158b92bdbda4 (origin/master, master)
+Author: Andrei Shablyka <an.shablyka@gmail.com>
+Date:   Fri Dec 14 05:34:59 2018 +0000
+
+    Chessboard2
+
+commit 370b4ca94cd9ba027a24cf63496ec2d0e18d4c3e
+Author: Andrei Shablyka <an.shablyka@gmail.com>
+Date:   Wed Dec 12 07:33:56 2018 +0000
+
+    newgit коммит
+
+commit 860c0c8ab2b7ac670ddcce193dc195875c0eaa38
+Author: Andrei Shablyka <an.shablyka@gmail.com>
+Date:   Wed Dec 12 07:32:14 2018 +0000
+
+    изменили hello-word
+
+commit bf218f00aca7bfb1be373fa0f1bb63da9e3d2eb3
+Author: Andrei Shablyka <an.shablyka@gmail.com>
+Date:   Wed Dec 12 07:19:25 2018 +0000
+
+    наш первый коммит
+ashablyka:~/workspace (one) $ git push origin one
+Username for 'https://github.com': ashablyka
+Password for 'https://ashablyka@github.com': 
+Counting objects: 2, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 264 bytes | 264.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'one' on GitHub by visiting:
+remote:      https://github.com/ashablyka/fd1/pull/new/one
+remote: 
+To https://github.com/ashablyka/fd1
+ * [new branch]      one -> one
+ashablyka:~/workspace (one) $ git branch two
+ashablyka:~/workspace (one) $ git checkout two
+Switched to branch 'two'
+ashablyka:~/workspace (two) $ git status
+On branch two
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   branchone.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ashablyka:~/workspace (two) $ git commit -m 'edit branchone.txt'
+On branch two
+Changes not staged for commit:
+        modified:   branchone.txt
+
+no changes added to commit
+ashablyka:~/workspace (two) $ gid add .
+bash: gid: command not found
+ashablyka:~/workspace (two) $ git commit -m 'edit branchone.txt'
+On branch two
+Changes not staged for commit:
+        modified:   branchone.txt
+
+no changes added to commit
+ashablyka:~/workspace (two) $ git add .
+ashablyka:~/workspace (two) $ git commit -m 'edit branchone.txt'
+[two 4865651] edit branchone.txt
+ 1 file changed, 1 insertion(+)
+ashablyka:~/workspace (two) $ mkdir branch_two
+ashablyka:~/workspace (two) $ git status
+On branch two
+nothing to commit, working tree clean
+ashablyka:~/workspace (two) $ touch branch_two/file1.txt
+ashablyka:~/workspace (two) $ ls branch_two/
+file1.txt
+ashablyka:~/workspace (two) $ touch branch_two/file2.txt
+ashablyka:~/workspace (two) $ git status
+On branch two
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        branch_two/
+
+nothing added to commit but untracked files present (use "git add" to track)
+ashablyka:~/workspace (two) $ git add branch_two/
+ashablyka:~/workspace (two) $ git status
+On branch two
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   branch_two/file1.txt
+        new file:   branch_two/file2.txt
+
+ashablyka:~/workspace (two) $ git comit -m 'ветка two создание директории'                                                                                                                                                                 
+git: 'comit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+ashablyka:~/workspace (two) $ git commit -m 'ветка two создание директории'                                                                                                                                                                       
+[two eb9909c] ветка two создание директории
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 branch_two/file1.txt
+ create mode 100644 branch_two/file2.txt
+ashablyka:~/workspace (two) $ git push origin two
+Username for 'https://github.com': ashablyka
+Password for 'https://ashablyka@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 650 bytes | 650.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'two' on GitHub by visiting:
+remote:      https://github.com/ashablyka/fd1/pull/new/two
+remote: 
+To https://github.com/ashablyka/fd1
+ * [new branch]      two -> two
+ashablyka:~/workspace (two) $ git status
+On branch two
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   branch_two/file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ashablyka:~/workspace (two) $ git checkout branch_two/file1.txt
+ashablyka:~/workspace (two) $ git status
+On branch two
+nothing to commit, working tree clean
+ashablyka:~/workspace (two) $ git checkout master 
+Switched to branch 'master'
+ashablyka:~/workspace (master) $ git pull origin master
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From https://github.com/ashablyka/fd1
+ * branch            master     -> FETCH_HEAD
+   b1ae656..5d1e2c4  master     -> origin/master
+Updating b1ae656..5d1e2c4
+Fast-forward
+ branchone.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 branchone.txt
