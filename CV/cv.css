@@ -1,0 +1,44 @@
+body {
+    font-family: cursive;
+    background-color: #F8F7F2;
+    padding: 15px;
+}
+
+h1 {
+    text-align: center;
+    color: #008000;
+}
+
+h2 {
+    color: #008000;
+}
+
+
+#name {
+    font: bold 18px sans-serif;
+}
+
+#phone {
+    font: bold 16px sans-serif;
+}
+
+p {
+    text-align: center;
+}
+
+.odd {
+    background: #D0E2D2;
+}
+
+.even {
+    background: #F9F3D0;
+}
+
+ul {
+    list-style-type: square;
+}
+
+section {
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
