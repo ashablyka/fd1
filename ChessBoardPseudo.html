@@ -63,37 +63,170 @@
         }
 
         div div:nth-child(2) div:nth-child(-9n+10)::before {
-            content: '1';
+            content: '8';
         }
 
         div div:nth-child(3) div:nth-child(-9n+10)::before {
-            content: '2';
-        }
-
-
-        div div:nth-child(4) div:nth-child(-9n+10)::before {
-            content: '3';
-        }
-
-        div div:nth-child(5) div:nth-child(-9n+10)::before {
-            content: '4';
-        }
-
-        div div:nth-child(6) div:nth-child(-9n+10)::before {
-            content: '5';
-        }
-
-        div div:nth-child(7) div:nth-child(-9n+10)::before {
-            content: '6';
-        }
-
-        div div:nth-child(8) div:nth-child(-9n+10)::before {
             content: '7';
         }
 
 
+        div div:nth-child(4) div:nth-child(-9n+10)::before {
+            content: '6';
+        }
+
+        div div:nth-child(5) div:nth-child(-9n+10)::before {
+            content: '5';
+        }
+
+        div div:nth-child(6) div:nth-child(-9n+10)::before {
+            content: '4';
+        }
+
+        div div:nth-child(7) div:nth-child(-9n+10)::before {
+            content: '3';
+        }
+
+        div div:nth-child(8) div:nth-child(-9n+10)::before {
+            content: '2';
+        }
+
+
         div div:nth-child(9) div:nth-child(-9n+10)::before {
-            content: '8';
+            content: '1';
+        }
+
+
+        div div:nth-child(3) div:nth-child(-n+9):nth-child(n+2)::before {
+            display: block;
+            content: "";
+            background-image: url(chess.png);
+            background-repeat: no-repeat;
+            height: 8vw;
+            background-size: 550%;
+            background-position: 105% -5%;
+            /* Черные пешки */
+        }
+
+        div div:nth-child(2) div:nth-child(-7n+9)::before {
+            display: block;
+            content: "";
+            background-image: url(chess.png);
+            background-repeat: no-repeat;
+            height: 8vw;
+            background-size: 550%;
+            background-position: 40% -10%;
+            /* Черные ладьи */
+        }
+
+        div div:nth-child(2) div:nth-child(-5n+8)::before {
+            display: block;
+            content: "";
+            background-image: url(chess.png);
+            background-repeat: no-repeat;
+            height: 8vw;
+            background-size: 550%;
+            background-position: 84% -10%;
+            /* Черные кони */
+        }
+
+        div div:nth-child(2) div:nth-child(-3n+7):nth-child(3n+4)::before {
+            display: block;
+            content: "";
+            background-image: url(chess.png);
+            background-repeat: no-repeat;
+            height: 8vw;
+            background-size: 550%;
+            background-position: 61.6% -10%;
+            /* Черные слоны */
+        }
+
+        div div:nth-child(2) div:nth-child(5)::before {
+            display: block;
+            content: "";
+            background-image: url(chess.png);
+            background-repeat: no-repeat;
+            height: 8vw;
+            background-size: 550%;
+            background-position: 18.8% -10%;
+            /* Черный ферзь */
+        }
+
+        div div:nth-child(2) div:nth-child(6)::before {
+            display: block;
+            content: "";
+            background-image: url(chess.png);
+            background-repeat: no-repeat;
+            height: 8vw;
+            background-size: 550%;
+            background-position: -3% -10%;
+            /* Черный король */
+        }
+
+        div div:nth-child(8) div:nth-child(-n+9):nth-child(n+2)::before {
+            display: block;
+            content: "";
+            background-image: url(chess.png);
+            background-repeat: no-repeat;
+            height: 8vw;
+            background-size: 550%;
+            background-position: 105% 116%;
+            /* Белые пешки */
+        }
+
+        div div:nth-child(9) div:nth-child(-7n+9)::before {
+            display: block;
+            content: "";
+            background-image: url(chess.png);
+            background-repeat: no-repeat;
+            height: 8vw;
+            background-size: 550%;
+            background-position: 41% 111%;
+            /* Белые ладьи */
+        }
+
+        div div:nth-child(9) div:nth-child(-5n+8)::before {
+            display: block;
+            content: "";
+            background-image: url(chess.png);
+            background-repeat: no-repeat;
+            height: 8vw;
+            background-size: 550%;
+            background-position: 84% 111%;
+            /* Белые кони */
+        }
+
+        div div:nth-child(9) div:nth-child(-3n+7):nth-child(3n+4)::before {
+            display: block;
+            content: "";
+            background-image: url(chess.png);
+            background-repeat: no-repeat;
+            height: 8vw;
+            background-size: 550%;
+            background-position: 61.6% 111%;
+            /* Белые слоны */
+        }
+
+        div div:nth-child(9) div:nth-child(5)::before {
+            display: block;
+            content: "";
+            background-image: url(chess.png);
+            background-repeat: no-repeat;
+            height: 8vw;
+            background-size: 550%;
+            background-position: 18.8% 111%;
+            /* Белый ферзь */
+        }
+
+        div div:nth-child(9) div:nth-child(6)::before {
+            display: block;
+            content: "";
+            background-image: url(chess.png);
+            background-repeat: no-repeat;
+            height: 8vw;
+            background-size: 550%;
+            background-position: -3% 111%;
+            /* Белый король */
         }
     </style>
 </head>
