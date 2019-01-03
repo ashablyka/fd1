@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Расстановка цифр</title>
+    <style>
+        body>div {
+            position: relative;
+        }
+
+        div>div {
+            position: relative;
+            width: 2em;
+        }
+
+        body>div:nth-child(2) {
+            top: -2em;
+        }
+
+        body>div:nth-child(3) {
+            top: -4em;
+        }
+
+        body>div:nth-child(4) {
+            top: -6em;
+        }
+
+        body>div:nth-child(5) {
+            top: -8em;
+        }
+
+        body>div:nth-child(6) {
+            top: -10em;
+        }
+
+        div:nth-child(1) div:nth-child(2),
+        div:nth-child(6) div:nth-child(2) {
+            top: -1.15em;
+            left: 1.5em;
+        }
+
+        /* Перемещение двоек на вторую позицию */
+
+        div:nth-child(1) div:nth-child(3),
+        div:nth-child(3) div:nth-child(3) {
+            top: -2.25em;
+            left: 3em;
+        }
+
+        /* Перемещение троек на третью позицию */
+
+        div:nth-child(2) div:nth-child(3),
+        div:nth-child(4) div:nth-child(3) {
+            top: -2.25em;
+            left: 1.5em;
+        }
+
+        /* Перемещение троек на вторую позицию */
+
+        div:nth-child(2) div:nth-child(2),
+        div:nth-child(5) div:nth-child(2) {
+            top: -1.15em;
+            left: 3em;
+        }
+
+        /* Перемещение двоек на третью позицию */
+
+        div:nth-child(3) div:nth-child(1),
+        div:nth-child(5) div:nth-child(1) {
+            left: 1.5em;
+        }
+
+        /* Перемещение единиц на вторую позицию */
+
+        div:nth-child(4) div:nth-child(1),
+        div:nth-child(6) div:nth-child(1) {
+            left: 3em;
+        }
+
+        /* Перемещение единиц на третью позицию */
+
+        div:nth-child(3) div:nth-child(2),
+        div:nth-child(4) div:nth-child(2) {
+            top: -1.15em;
+        }
+
+        /* Перемещение двоек на первую позицию */
+
+        div:nth-child(5) div:nth-child(3),
+        div:nth-child(6) div:nth-child(3) {
+            top: -2.25em;
+        }
+
+        /* Перемещение троек на первую позицию */
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>
