@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Smile</title>
+    <style>
+        body>div {
+            width: 80vmin;
+            height: 80vmin;
+            position: relative;
+        }
+
+        body>div,
+        .wrapper div {
+            border: 3vmin solid black;
+        }
+
+        div div {
+            position: absolute;
+        }
+
+        .wrapper {
+            overflow: hidden;
+            /*border: 1px solid black;*/
+        }
+
+        div:not(.wrapper) {
+            border-radius: 50%;
+        }
+
+        .eye {
+            height: 8vmin;
+            width: 16vmin;
+        }
+
+        .eye div {
+            width: 10vmin;
+            height: 10vmin;
+        }
+
+        #eye1 {
+            top: 25vmin;
+            left: 17vmin;
+        }
+
+        #eye2 {
+            top: 25vmin;
+            left: 47vmin;
+        }
+
+        .smile {
+            width: 56vmin;
+            height: 56vmin;
+            top: 45vmin;
+            left: 12vmin;
+        }
+
+        .smile1 {
+            width: 50vmin;
+            height: 50vmin;
+            top: -28vmin;
+        }
+
+        .circle {
+            width: 3vmin;
+            height: 3vmin;
+            background-color: black;
+        }
+
+        #circle1 {
+            top: 43.6vmin;
+            left: 12vmin;
+        }
+
+        #circle2 {
+            top: 43.6vmin;
+            left: 65vmin;
+        }
+
+        .circle_eye {
+            top: 31.5vmin;
+        }
+
+        #circle3 {
+            left: 17vmin;
+        }
+
+        #circle4 {
+            left: 30vmin;
+        }
+
+        #circle5 {
+            left: 47vmin;
+        }
+
+        #circle6 {
+            left: 60vmin;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="wrapper eye" id="eye1">
+            <div></div>
+        </div>
+        <div class="wrapper eye" id="eye2">
+            <div></div>
+        </div>
+        <div class="wrapper smile">
+            <div class="smile1"></div>
+        </div>
+        <div class="circle" id="circle1"></div>
+        <div class="circle" id="circle2"></div>
+        <div class="circle circle_eye" id="circle3"></div>
+        <div class="circle circle_eye" id="circle4"></div>
+        <div class="circle circle_eye" id="circle5"></div>
+        <div class="circle circle_eye" id="circle6"></div>
+    </div>
+</body>
+
+</html>
