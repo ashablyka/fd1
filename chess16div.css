@@ -1,0 +1,271 @@
+body {
+  /* 0001 */
+  margin: 0;
+}
+
+.chessTable {
+  /* 0010 */
+  margin-left: 10vmin;
+  margin-top: 10vmin;
+}
+
+.chessTable>div:nth-child(-n+4) {
+  /* 0021 */
+  height: 10vmin;
+  width: 80vmin;
+  outline: 1px solid #f00;
+  position: relative;
+}
+
+.chessTable>div:nth-child(2) {
+   /* 0021 */
+  top: 10vmin;
+}
+
+.chessTable>div:nth-child(3) {
+   /* 0021 */
+  top: 20vmin;
+}
+
+.chessTable>div:nth-child(4) {
+   /* 0021 */
+  top: 30vmin;
+}
+
+
+.chessTable>div:nth-child(-n+4)::after {
+   /* 0022 */
+  height: 10vmin;
+  width: 80vmin;
+  outline: 1px solid #f00;
+  content: '';
+  display: block;
+  position: relative;
+  top: 10vmin;
+  background: linear-gradient(to right, #fff 12.49%, #f00 12.50%, #f00 24.99%, #fff 25%, #fff 37.49%, #f00 37.50%, #f00 49.99%,
+  #fff 50%, #fff 62.49%, #f00 62.50%, #f00 74.99%, #fff 75%, #fff 87.49%, #f00 87.50%);
+}
+
+
+.chessTable>div:nth-child(1)::before,
+.chessTable>div:nth-child(2)::before {
+  /* 0022, 0022 */
+  content: '12345678';
+  letter-spacing: calc(10vmin - 0.5em);
+  display: block;
+  position: fixed;
+  height: 10vmin;
+  width: 80vmin;
+  left: 15vmin;
+}
+
+.chessTable>div:nth-child(1)::before {
+  /* 0022 */
+  top: calc(5vmin - 0.5em);
+}
+
+.chessTable>div:nth-child(2)::before {
+  /* 0022 */
+  top: calc(95vmin - 0.5em);
+}
+
+.chessTable>div:nth-child(3)::before,
+.chessTable>div:nth-child(4)::before {
+  /* 0022, 0022 */
+  content: 'abcdefgh';
+  letter-spacing: calc(10vmin - 0.5em);
+  display: block;
+  position: fixed;
+  word-wrap: break-word;
+  height: 80vmin;
+  width: 10vmin;
+  top: 10vmin;
+  line-height: calc(10vmin);
+}
+
+.chessTable>div:nth-child(3)::before {
+  /* 0022 */
+  left: calc(5vmin - 0.5em);
+}
+
+.chessTable>div:nth-child(4)::before {
+  /* 0022 */
+  left: calc(95vmin - 0.5em);
+}
+
+
+
+.chessTable>div:nth-child(-n+4) {
+  /* 0021 */
+  background: linear-gradient(to left, #fff 12.49%, #f00 12.50%, #f00 24.99%, #fff 25%, #fff 37.49%, #f00 37.50%, #f00 49.99%,
+  #fff 50%, #fff 62.49%, #f00 62.50%, #f00 74.99%, #fff 75%, #fff 87.49%, #f00 87.50%);
+}
+
+
+.chessTable>div:nth-last-child(-n+11),
+.chessTable>div:nth-last-child(-n+11)::before,
+.chessTable>div:nth-last-child(-n+11)::after {
+  /* 0021, 0022, 0022 */
+  background-image: url('https://raw.githubusercontent.com/antonkulakov-it/library/master/chess.png');
+  background-size: 650%;
+  background-repeat: no-repeat;
+  height: 10vmin;
+  width: 10vmin;
+  position: fixed;
+  top: 10vmin;
+}
+
+.chessTable>div:nth-last-child(-n+11)::before,
+.chessTable>div:nth-last-child(-n+11)::after {
+  /* 0022, 0022 */
+  display: block;
+  content: '';
+}
+
+/*
+прячем "лишнее"
+*/
+
+.chessTable>div:nth-child(5)::after {
+  /* 0022 */
+  display: none;
+}
+
+
+.chessTable>div:nth-last-child(-n+8)::before,
+.chessTable>div:nth-last-child(-n+8)::after {
+  /* 0022, 0022 */
+  background-position-x: 103%;
+}
+
+.chessTable>div:nth-last-child(-n+8)::before {
+  /* 0022 */
+  top: 20vmin;
+}
+
+/*описываем белые фигуры*/
+
+.chessTable>div:nth-last-child(-n+8)::after,
+.chessTable>div:nth-child(-n+7):nth-child(n+4),
+.chessTable>div:nth-child(-n+7):nth-child(n+4)::before,
+.chessTable>div:nth-child(-n+7):nth-child(n+4)::after {
+  /* 0022, 0031, 0032, 0032 */
+  background-position-y: 100%;
+}
+
+/*расставляем положения фигур*/
+
+.chessTable>div:nth-last-child(-n+8)::after {
+  /* 0022 */
+  top: 70vmin;
+}
+
+.chessTable>div:nth-child(5),
+.chessTable>div:nth-child(6),
+.chessTable>div:nth-child(7),
+.chessTable>div:nth-child(5)::before,
+.chessTable>div:nth-child(6)::before,
+.chessTable>div:nth-child(7)::before,
+.chessTable>div:nth-child(5)::after,
+.chessTable>div:nth-child(6)::after,
+.chessTable>div:nth-child(7)::after {
+  /* 0021, 0021, 0021, 0022, 0022, 0022, 0022, 0022, 0022 */
+  top: 80vmin;
+}
+
+.chessTable>div:nth-last-child(1),
+.chessTable>div:nth-last-child(1)::after,
+.chessTable>div:nth-last-child(1)::before,
+.chessTable>div:nth-child(7)::before {
+  /* 0021, 0022, 0022, 0022 */
+  left: 80vmin;
+}
+
+.chessTable>div:nth-last-child(2),
+.chessTable>div:nth-last-child(2)::after,
+.chessTable>div:nth-last-child(2)::before,
+.chessTable>div:nth-child(7)::after {
+  /* 0021, 0022, 0022, 0022 */
+  left: 70vmin;
+}
+
+.chessTable>div:nth-last-child(3),
+.chessTable>div:nth-last-child(3)::after,
+.chessTable>div:nth-last-child(3)::before,
+.chessTable>div:nth-child(7) {
+  /* 0021, 0022, 0022, 0021 */
+  left: 60vmin;
+}
+
+.chessTable>div:nth-last-child(4),
+.chessTable>div:nth-last-child(4)::after,
+.chessTable>div:nth-last-child(4)::before,
+.chessTable>div:nth-child(6)::before {
+  /* 0021, 0022, 0022, 0022 */
+  left: 50vmin;
+}
+
+.chessTable>div:nth-last-child(5),
+.chessTable>div:nth-last-child(5)::after,
+.chessTable>div:nth-last-child(5)::before,
+.chessTable>div:nth-child(6)::after {
+  /* 0021, 0022, 0022, 0022 */
+  left: 40vmin;
+}
+
+.chessTable>div:nth-last-child(6),
+.chessTable>div:nth-last-child(6)::after,
+.chessTable>div:nth-last-child(6)::before,
+.chessTable>div:nth-child(6) {
+  /* 0021, 0022, 0022, 0021 */
+  left: 30vmin;
+}
+
+.chessTable>div:nth-last-child(7),
+.chessTable>div:nth-last-child(7)::after,
+.chessTable>div:nth-last-child(7)::before,
+.chessTable>div:nth-child(5)::before {
+  /* 0021, 0022, 0022, 0022 */
+  left: 20vmin;
+}
+
+
+/*расставляем достоинства фигур*/
+
+/*ладьи*/
+
+.chessTable>div:nth-last-child(8),
+.chessTable>div:nth-last-child(1),
+.chessTable>div:nth-child(7)::before,
+.chessTable>div:nth-child(5) {
+  /* 0021, 0021, 0022, 0021 */
+  background-position-x: 41%;
+}
+
+/*кони*/
+
+.chessTable>div:nth-last-child(7),
+.chessTable>div:nth-last-child(2),
+.chessTable>div:nth-child(5)::before,
+.chessTable>div:nth-child(7)::after {
+  /* 0021, 0021, 0022, 0022 */
+  background-position-x: 83%;
+}
+
+/*слоны*/
+
+.chessTable>div:nth-last-child(6),
+.chessTable>div:nth-last-child(3),
+.chessTable>div:nth-child(6),
+.chessTable>div:nth-child(7) {
+  /* 0021, 0021, 0021, 0021 */
+  background-position-x: 62%;
+}
+
+/*ферзи*/
+
+.chessTable>div:nth-last-child(4),
+.chessTable>div:nth-child(6)::before {
+  /* 0021, 0022 */
+  background-position-x: 20%;
+}
