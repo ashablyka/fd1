@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Карандаш</title>
+    <style>
+        .body {
+            position: relative;
+        }
+
+        .body div {
+            position: absolute;
+        }
+
+        .wood {
+            width: 70vw;
+            height: 60px;
+            background: #D8DC1C;
+            background: linear-gradient(#D8DC1C 18px, #F7F92B 18px, #F7F92B 40px, #D8DC1C 40px);
+        }
+
+        .griph-cover {
+            left: 70vw;
+            height: 0;
+            width: 0;
+            border: 30px solid transparent;
+            border-left: 80px solid #F20007;
+        }
+
+        .griph {
+            top: -3px;
+            left: -8px;
+            height: 0;
+            width: 0;
+            border: 3px solid transparent;
+            border-left: 8px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <div class="wood"></div>
+        <div class="griph-cover">
+            <div class="griph"></div>
+        </div>
+    </div>
+</body>
+
+</html>
