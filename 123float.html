@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Расстановка цифр</title>
+    <style>
+        div {
+            float: left;
+            width: 2em;
+        }
+
+        div:nth-child(3n+1) {
+            clear: left;
+        }
+
+        div:nth-child(6),
+        div:nth-child(8),
+        div:nth-child(12),
+        div:nth-child(17) {
+            margin-left: -4em;
+        }
+
+        div:nth-child(5),
+        div:nth-child(7),
+        div:nth-child(13) {
+            margin-left: 2em;
+        }
+
+        div:nth-child(10),
+        div:nth-child(16) {
+            margin-left: 4em;
+        }
+
+        div:nth-child(11),
+        div:nth-child(15),
+        div:nth-child(18) {
+            margin-left: -6em;
+        }
+    </style>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</body>
+
+</html>
