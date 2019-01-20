@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Слайдер</title>
+    <style>
+        .slider {
+            position: relative;
+        }
+
+        input {
+            display: none;
+        }
+
+        .slider>.slide {
+            width: 500px;
+            height: 300px;
+            outline: 1px solid black;
+            display: none;
+        }
+
+
+        .slider>.slide:nth-of-type(1) {
+            background-color: #B22222;
+        }
+
+        .slider>.slide:nth-of-type(2) {
+            background-color: #006400;
+        }
+
+        .slider>.slide:nth-of-type(3) {
+            background-color: #0000CD;
+        }
+
+        #red:checked~.slide:nth-of-type(1),
+        #green:checked~.slide:nth-of-type(2),
+        #blue:checked~.slide:nth-of-type(3) {
+            display: block;
+        }
+
+
+        nav {
+            position: absolute;
+            top: 260px;
+            left: 225px;
+        }
+
+        #red:checked~nav [for="red"] div,
+        #green:checked~nav [for="green"] div,
+        #blue:checked~nav [for="blue"] div {
+            background-color: white;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        li div {
+            width: 8px;
+            height: 8px;
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+
+        li div:hover {
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .red,
+        .green,
+        .blue {
+            color: #CCC;
+            font-size: 50px;
+            position: absolute;
+            top: 115px;
+            left: 10px;
+            display: none;
+        }
+
+        div>label:first-child {
+            margin-right: 430px;
+        }
+
+        #red:checked~.red,
+        #green:checked/*~.slide:nth-of-type(2):hover*/~.green,
+        #blue:checked~.blue {
+            display: block;
+        }
+
+        .arrows label:hover {
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <input type="radio" id="red" name="slide" checked="" />
+        <input type="radio" id="green" name="slide" />
+        <input type="radio" id="blue" name="slide" />
+        <nav>
+            <ul>
+                <li><label for="red"><div></div></label></li>
+                <li><label for="green"><div></div></label></li>
+                <li><label for="blue"><div></div></label></li>
+            </ul>
+        </nav>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="red arrows">
+            <label for="blue">&lang;</label>
+            <label for="green">&rang;</label>
+        </div>
+        <div class="green arrows">
+            <label for="red">&lang;</label>
+            <label for="blue">&rang;</label>
+        </div>
+        <div class="blue arrows">
+            <label for="green">&lang;</label>
+            <label for="red">&rang;</label>
+        </div>
+    </div>
+</body>
+
+</html>
