@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Макет</title> <!-- Добавить title -->
+<meta charste="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@media screen and (max-width: 1024px) {
+header>div:nth-of-type(2) {
+display: none;
+}
+}
+
+@media screen and (min-width: 0px) and (max-width: 640px) {
+hr, main>aside>div {
+display: none; /* Скрыть блок 7 */
+}
+header>div {
+height: 85px;
+}
+header>div, main>section>div {
+margin-bottom: 16px;
+}
+main>section>article {
+height: 200px;
+}
+main>section>ul {
+margin: 16px auto;
+width: calc(90vw - 18px);
+word-spacing: 5px; /* Увеличить расстояние между блоками */
+}
+main>section>ul>li {
+border: 1px solid black;
+border-radius: 50%;
+width: calc(45vw - 18px);
+height: calc(45vw - 18px);
+display: inline-block;
+line-height: 17vw;
+text-indent: 5vw;
+margin-bottom: 2vw; /* Поправить номера блоков */
+}
+
+main>section>div {
+height: 85px;
+}
+main {
+padding-bottom: 316px; /* 300 + 16*/
+}
+main>aside>ul {
+position: absolute;
+height: 300px;
+width: 100%;
+bottom: 0;
+}
+
+footer>div:nth-of-type(1), footer>div:nth-of-type(2) {
+display: none;
+}
+
+footer>div:nth-last-of-type(1), footer>div:nth-last-of-type(2) {
+display: inline-block;
+width: calc(50% - 2px);
+height: 50px;
+}
+
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+header>div {
+font-size: initial;
+height: 85px;
+display: inline-block;
+vertical-align: top;
+}
+header>div:nth-of-type(1) {
+width: 30%;
+}
+header>div:nth-of-type(3) {
+width: calc(70% - 16px);
+float: right;
+}
+
+hr:first-of-type {
+display: none;
+}
+
+main>aside>ul {
+height: 100px;
+padding: 0;
+}
+main>aside>ul>li {
+display: inline-block;
+}
+
+main>section>ul>li {
+display: inline-block;
+width: 30%;
+height: 120px;
+outline: 1px solid black;
+margin-bottom: 16px; /* Добавить отступы между блоками */
+font-size: initial;
+line-height: 18px;/* Отобразить номера блоков */
+}
+main>section>ul {
+font-size: 0;
+line-height: 40px;
+}
+main>section>ul>li:nth-of-type(3n+2),
+main>section>ul>li:nth-of-type(3n+3) {
+margin-left: 5%;
+}
+
+main {
+/*
+используем padding, чтобы догнать реальную высоту до размеров нашего блока с position: absolute */
+padding-bottom: 80px;
+}
+main>section>div {
+position: absolute;
+width: 100%;
+height: 80px;
+margin-bottom: 16px;
+}
+
+main>section>div:nth-of-type(1) {
+top: calc(100% + 18px);
+}
+
+main>section>div:nth-of-type(2) {
+top: calc(100% + 114px);
+}
+
+main>aside>div {
+height: 80px;
+outline: 1px solid black;
+position: absolute;
+bottom: 0;
+width: 100%;
+}
+footer {
+margin-top: 200px;
+
+}
+footer>div {
+height: 80px;
+margin-bottom: 16px;
+}
+footer>div:nth-of-type(n+3) {
+display: none;
+}
+    article {
+        display: none;
+    } /* Спрятать блок 5 */
+}
+
+@media screen and (min-width: 1025px) {
+
+header,
+main,
+footer {
+font-size: 0;
+margin: auto;
+}
+header>div {
+font-size: initial;
+height: 85px;
+display: inline-block;
+vertical-align: top;
+}
+
+header>div:nth-of-type(1) {
+width: 12.07%;
+}
+header>div:nth-of-type(2) {
+width: 27.95%;
+margin-left: 16px;
+}
+header>div:nth-of-type(3) {
+width: calc(59.98% - 32px);
+margin-left: 16px;
+}
+
+main>aside,
+main>section {
+display: inline-block;
+vertical-align: top;
+font-size: initial;/* Отобразить номера блоков */
+}
+main>aside {
+width: 145px;    
+}
+
+main>aside>ul {
+height: 270px;
+margin: 0; /*Поправить блок*/
+}
+
+main>aside>div {
+height: 140px;
+/* 100% будет от родителя, у которого position не static
+width: 100%;
+*/
+width: 145px;
+position: absolute;
+bottom: 0;
+}
+main>section {
+margin-left: 16px;
+width: calc(100% - 161px);
+}
+main>section>article {
+height: 165px;
+margin-bottom: 16px;
+}
+main>section>ul {
+word-spacing: 16px;
+line-height: 20px; /*Поправить высоту номеров*/
+}
+main>section>ul>li {
+display: inline-block;
+width: 17.95%;
+height: 120px;   
+}
+main>section>ul>li:nth-child(-n+5) {
+        margin-bottom: 16px; /*Поправить блок*/
+    }  
+main>section>div:nth-of-type(1),
+main>section>div:nth-of-type(2) {
+width: 304px;
+height: 170px;
+display: inline-block;
+}
+main>section>div:nth-of-type(2) {
+margin-left: 16px;
+}
+
+footer {
+position: relative;
+font-size: initial;
+}
+footer>div {
+display: inline-block;
+height: 144px;
+width: 30%;
+}
+footer>div:nth-of-type(2) {
+margin-left: 38px;
+}
+footer>div:nth-last-of-type(1),
+footer>div:nth-last-of-type(2) {
+position: absolute;
+right: 0;
+height: 65px;
+}
+footer>div:nth-last-of-type(2) {
+bottom: 0;
+}
+}
+
+@media screen and (min-width: 1200px) {
+/*
+вместо того, чтобы все копи-пастить 
+проценты дают нам возможность прописать просто максимальную ширину
+*/
+header,
+main,
+footer,
+hr {
+max-width: 1100px;/* Увеличить ширину страницы */
+}
+}
+
+main {
+position: relative;
+}
+
+main>aside>ul,
+header>div,
+main>aside>ul,
+main>aside>div,
+footer>div {
+background: #888;
+}
+
+main>section>article,
+main>section>div:nth-of-type(1),
+main>section>div:nth-of-type(2),
+main>section>ul>li {
+background: #ddd;
+}
+
+main>aside>ul,
+main>section>ul {
+padding: 0;
+}
+
+main>aside>ul>li,
+main>section>ul>li {
+list-style-type: none;
+}
+</style>
+</head>
+
+<body>
+<header>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+</header>
+<hr>
+<main>
+<aside>
+<ul>4</ul>
+<div>7</div>
+</aside>
+<section>
+<article>5</article>
+<ul>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+</ul>
+<div>8</div>
+<div>9</div>
+</section>
+</main>
+<hr>
+<footer>
+<div>10</div>
+<div>11</div>
+<div>12</div>
+<div>13</div>
+</footer>
+</body>
+
+</html>
