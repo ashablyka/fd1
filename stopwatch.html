@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Секундомер</title>
+    <style type="text/css">
+        .analog {
+            /*margin: auto;*/
+            width: 330px;
+            height: 330px;
+            border: 6px solid black;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .long_line {
+            width: 4px;
+            height: 165px;
+            /*background: blue;*/
+            position: absolute;
+            left: calc(50% - 2px);
+            transform-origin: 2px 165px;
+        }
+
+        .long_line>.long_line {
+            transform: rotate(30deg);
+        }
+
+        .short_line {
+            width: 4px;
+            height: 10px;
+            background: black;
+        }
+
+        .center {
+            position: absolute;
+            top: calc(50% - 6px);
+            left: calc(50% - 6px);
+            width: 10px;
+            height: 10px;
+            border: 1px solid black;
+            border-radius: 50%;
+            background: black;
+        }
+
+        @keyframes turn {
+            from {
+                transform: rotate(0deg)
+            }
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        .hand {
+            margin: 36px auto;
+            width: 4px;
+            height: 150px;
+            background: red;
+            transform-origin: 2px 128px;
+            animation: turn 60s linear 0s infinite;
+        }
+
+        .number {
+            position: absolute;
+            font: 20px sans-serif;
+        }
+
+        .number:nth-of-type(2) {
+            top: 20px;
+            left: 159px;
+        }
+
+        .number:nth-of-type(3) {
+            top: 40px;
+            left: 226px;
+        }
+
+        .number:nth-of-type(4) {
+            top: 88px;
+            left: 260px;
+        }
+
+        .number:nth-of-type(5) {
+            top: 155px;
+            left: 286px;
+        }
+
+        .number:nth-of-type(6) {
+            top: 216px;
+            left: 264px;
+        }
+
+        .number:nth-of-type(7) {
+            top: 270px;
+            left: 220px;
+        }
+
+        .number:nth-of-type(8) {
+            top: 286px;
+            left: 154px;
+        }
+
+        .number:nth-of-type(9) {
+            top: 270px;
+            left: 90px;
+        }
+
+        .number:nth-of-type(10) {
+            top: 216px;
+            left: 40px;
+        }
+
+        .number:nth-of-type(11) {
+            top: 155px;
+            left: 20px;
+        }
+
+        .number:nth-of-type(12) {
+            top: 88px;
+            left: 42px;
+        }
+
+        .number:nth-of-type(13) {
+            top: 40px;
+            left: 86px;
+        }
+        .digital {
+            margin-top: 50px;
+        }
+        .digital>div {
+            position: absolute;
+            opacity: 0;
+            font-size: 60px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        
+        @keyframes show {
+            from { opacity: 0}
+            to { opacity: 1}
+        }
+        
+        .digital>div:nth-child(1) {
+            animation: show 1s ease 0s;
+        }
+        .digital>div:nth-child(2) {
+            animation: show 1s ease 1s;
+        }
+        .digital>div:nth-child(3) {
+            animation: show 1s ease 2s;
+        }
+        .digital>div:nth-child(4) {
+            animation: show 1s ease 3s;
+        }
+        .digital>div:nth-child(5) {
+            animation: show 1s ease 4s;
+        }
+        .digital>div:nth-child(6) {
+            animation: show 1s ease 5s;
+        }
+        .digital>div:nth-child(7) {
+            animation: show 1s ease 6s;
+        }
+        .digital>div:nth-child(8) {
+            animation: show 1s ease 7s;
+        }
+        .digital>div:nth-child(9) {
+            animation: show 1s ease 8s;
+        }
+        .digital>div:nth-child(10) {
+            animation: show 1s ease 9s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="analog">
+        <div class="long_line">
+            <div class="long_line">
+                <div class="long_line">
+                    <div class="long_line">
+                        <div class="long_line">
+                            <div class="long_line">
+                                <div class="long_line">
+                                    <div class="long_line">
+                                        <div class="long_line">
+                                            <div class="long_line">
+                                                <div class="long_line">
+                                                    <div class="long_line">
+                                                        <div class="short_line"></div>
+                                                    </div>
+                                                    <div class="short_line"></div>
+                                                </div>
+                                                <div class="short_line"></div>
+                                            </div>
+                                            <div class="short_line"></div>
+                                        </div>
+                                        <div class="short_line"></div>
+                                    </div>
+                                    <div class="short_line"></div>
+                                </div>
+                                <div class="short_line"></div>
+                            </div>
+                            <div class="short_line"></div>
+                        </div>
+                        <div class="short_line"></div>
+                    </div>
+                    <div class="short_line"></div>
+                </div>
+                <div class="short_line"></div>
+            </div>
+            <div class="short_line"></div>
+        </div>
+        <div class="number">0</div>
+        <div class="number">5</div>
+        <div class="number">10</div>
+        <div class="number">15</div>
+        <div class="number">20</div>
+        <div class="number">25</div>
+        <div class="number">30</div>
+        <div class="number">35</div>
+        <div class="number">40</div>
+        <div class="number">45</div>
+        <div class="number">50</div>
+        <div class="number">55</div>
+        <div class="center"></div>
+        <div class="hand"></div>
+    </div>
+    <div class="digital">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>0</div>
+    </div>
+</body>
+
+</html>
