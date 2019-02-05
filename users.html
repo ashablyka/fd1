@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+</head>
+
+<body>
+    <script>
+        var user_list = [];
+        var younger = 0;
+        var older = 0;
+        for (var i = 0; true; i++) {
+            user_list[i] = {};
+            var id = i + 1;
+            user_list[i].surname = prompt('Введите фамилию пользователя №' + id);
+            if (user_list[i].surname == null) {
+                break;
+            }
+            user_list[i].name = prompt('Введите имя пользователя №' + id);
+            if (user_list[i].name == null) {
+                break;
+            }
+            user_list[i].middlename = prompt('Введите отчество пользователя №' + id);
+            if (user_list[i].middlename == null) {
+                break;
+            }
+            user_list[i].age = prompt('Введите возраст пользователя №' + id);
+            if (user_list[i].age == null) {
+                break;
+            }
+            if (user_list[i].age < 18) {
+                younger++;
+            } else older++;
+        }
+        alert('Количество пользователей до 18 лет: ' + younger + '\nКоличество пользователей старше 18 лет: ' + older);
+        console.log(user_list);
+    </script>
+</body>
+
+</html>
