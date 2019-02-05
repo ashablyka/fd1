@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+</head>
+
+<body>
+    <script>
+        var str = prompt('Введите строку');
+        str = str.toLowerCase().split(' ').join('').split('.').join('')
+        .split(',').join('').split('!').join('').split(':').join('')
+        .split(';').join('').split('?').join('').split('"').join('').
+        split('-').join('').split('(').join('').split(')').join('');
+        var newStr = str.split('').reverse().join('');
+        var palindrome = (newStr == str) ? ' ' : ' не ';
+        alert('Строка' + palindrome + 'является палиндромом');
+    </script>
+</body>
+
+</html>
