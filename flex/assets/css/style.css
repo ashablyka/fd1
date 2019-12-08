@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 200px;
+    align-items: flex-start;
+}
+
+.box {
+    outline: 1px solid black;
+    /*flex-basis: calc(100% / 6);*/
+    flex-basis: 50px;
+    /*width: 100px;*/
+    flex-grow: 1;
+}
+
+.box1 {
+    /*width: 150px;*/
+    flex-grow: 5;
+    flex-basis: 250px;
+}
+
+.box3 {
+    /*width: 150px;*/
+    align-self: flex-end;
+    flex-shrink: 0;
+}

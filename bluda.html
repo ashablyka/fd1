@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        input[type=radio] {
+            display: none;
+        }
+
+        #zavtrak:checked~nav [for=zavtrak] {
+            background-color: red;
+        }
+
+        #obed:checked~nav [for=obed] {
+            background-color: red;
+        }
+
+        #uzhin:checked~nav [for=uzhin] {
+            background-color: red;
+        }
+
+        #zavtrak:checked~ul.bluda:nth-of-type(1) {
+            display: block;
+        }
+
+        #obed:checked~ul.bluda:nth-of-type(2) {
+            display: block;
+        }
+
+        #uzhin:checked~ul.bluda:nth-of-type(3) {
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.bluda {
+            width: 90%;
+            margin: 0 auto;
+            display: none;
+        }
+
+        ul.bluda>li {
+            display: inline-block;
+            width: 30%;
+        }
+
+        ul.bluda>li>img {
+            width: 100%;
+        }
+
+        nav>ul>li,
+        nav>ul>li>label {
+            display: inline-block;
+        }
+
+        nav>ul>li>label {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 320px) {
+            ul.bluda>li {
+                width: 100%;
+            }
+            nav>ul>li {
+                display: inline-block;
+                width: 100%;
+            }
+
+        }
+
+        ul.bluda>li,
+        ul.bluda>li>img {
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="radio" name="eat" id="zavtrak" checked="">
+    <input type="radio" name="eat" id="obed">
+    <input type="radio" name="eat" id="uzhin">
+    <nav>
+        <ul>
+            <li><label for="zavtrak">Завтрак</label></li>
+            <li><label for="obed">Обед</label></li>
+            <li><label for="uzhin">Ужин</label></li>
+        </ul>
+    </nav>
+    <ul class="bluda">
+        <li><img src="https://edanayra.ru/components/com_jshopping/files/img_categories/1391742380_im_267.jpg"></li>
+        <li><img src="http://images.vfl.ru/ii/1477024492/4a44ee1f/14602801_s.jpg"></li>
+        <li><img src="http://zblogowani.pl/public/cache/1404/628883/200x200.jpg?t=1440615243"></li>
+    </ul>
+
+
+    <ul class="bluda">
+        <li><img src="https://www.liveorganic.ru/upload/resize_cache/iblock/23f/200_200_2/23f541535e230c232753c99c86e8b770.jpg"></li>
+        <li><img src="https://www.professionalbeauty.com.au/wp-content/uploads/2015/05/fruits-200x200.jpg"></li>
+        <li><img src="http://womanadvice.ru/sites/default/files/imagecache/height_200/skolko_v_kuske_piccy_kaloriy.jpg"></li>
+    </ul>
+
+    <ul class="bluda">
+        <li><img src="http://vegservice.ru/upload/resize_cache/main/1a0/200_200_0/1a080a9860fcfff70455a5e78babac2d.jpg"></li>
+        <li><img src="https://pp.vk.me/c622918/v622918371/4569b/LPSfqPxsMAc.jpg"></li>
+        <li><img src="http://fasoff.kiev.ua/wp-content/uploads/2014/11/%D0%95-065.jpg"></li>
+    </ul>
+</body>
+
+</html>

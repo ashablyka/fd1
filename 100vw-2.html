@@ -1,0 +1,46 @@
+!DOCTYPE html>
+<html>
+
+<head>
+    <title> </title>
+    <style>
+        body {
+            margin: 0px;
+            /*overflow-y: scroll;*/
+        }
+
+       section>div {
+            width: calc(100vw - (100vw - 100%));
+            /*width:100vw;*/
+            height: 100vw;
+            background: red;
+            z-index: 1000;
+            margin: 0 auto;
+        }
+
+        div>div {
+            /*width: calc(100vw - (100vw - 100%));*/
+            width: 50vw;
+            height: 10vw;
+            background: pink;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <div>
+            <div></div>
+            <div></div>
+        </div>
+    </section>
+
+</body>
+
+</html>

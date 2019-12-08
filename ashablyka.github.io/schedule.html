@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Программа</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/css/all.css">
+</head>
+
+<body>
+    <input type="checkbox" id="hmt" class="hidden-menu-ticker">
+    <header class="header">
+        <div class="header__upper">
+            <div class="logo"><a href="index.html" title="Главная"><img class="logo-img" src="assets/img/tennis.jpg" alt="Лого" title="Главная"></a></div>
+            <ul class="header__social">
+                <li><a href="#" title="ВКонтакте"><i class="fab fa-vk myfont"></i></a></li>
+                <li><a href="#" title="Одноклассники"><i class="fab fa-odnoklassniki myfont"></i></a></li>
+                <li><a href="#" title="Facebook"><i class="fab fa-facebook-f myfont"></i></a></li>
+                <li><a href="#" title="Viber"><i class="fab fa-viber myfont"></i></a></li>
+                <li><a href="#" title="Telegram"><i class="fab fa-telegram-plane myfont"></i></a></li>
+            </ul>
+            <a href="index.html" title="Главная">
+                <h1 class="main-title">Minsk Open 2019</h1>
+            </a>
+            <div class="nav__hidden">
+                <label class="btn-menu" for="hmt">
+                    <span class="first"></span>
+                    <span class="second"></span>
+                    <span class="third"></span>
+                </label>
+            </div>
+        </div>
+        <nav class="nav">
+
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html#news" class="nav__link">Новости</a></li>
+                <input type="checkbox" id="btn-submenu-tourn" class="btn-submenu-tourn">
+                <input type="checkbox" id="btn-submenu-info" class="btn-submenu-info">
+                <li class="nav__item"><label for="btn-submenu-tourn"><a class="nav__link">Турнир</a></label>
+                    <ul class="nav__sublist">
+                        <li class="nav__subitem"><a href="registration.html" class="nav__sublink">Регистрация</a></li>
+                        <li class="nav__subitem"><a href="results.html" class="nav__sublink">Результаты</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item"><label for="btn-submenu-info"><a class="nav__link">Информация</a></label>
+                    <ul class="nav__sublist">
+                        <li class="nav__subitem"><a href="doc.html" class="nav__sublink">Положение</a></li>
+                        <li class="nav__subitem"><a href="schedule.html" class="nav__sublink">Программа</a></li>
+                        <li class="nav__subitem"><a href="dvorec.html" class="nav__sublink">Место проведения</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-wrapper">
+        <main class="main">
+            <div class="schedule">
+                <h1 class="schedule-title">Программа турнира</h1>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Дата</th>
+                            <th>Время</th>
+                            <th>Мероприятие</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>18 мая</td>
+                            <td>10:00&nbsp;&ndash;&nbsp;11:00</td>
+                            <td>Регистрация участников</td>
+                        </tr>
+                        <tr>
+                            <td>18 мая</td>
+                            <td>11:00&nbsp;&ndash;&nbsp;12:00</td>
+                            <td>Торжественное церемония открытия турнира<br> Проведение жеребьевки</td>
+                        </tr>
+                        <tr>
+                            <td>18 мая</td>
+                            <td>12:00</td>
+                            <td>Предварительные раунды</td>
+                        </tr>
+                        <tr>
+                            <td>19 мая</td>
+                            <td>12:00</td>
+                            <td>Предварительные раунды</td>
+                        </tr>
+                        <tr>
+                            <td>20 мая</td>
+                            <td></td>
+                            <td>День отдыха</td>
+                        </tr>
+                        <tr>
+                            <td>21 мая</td>
+                            <td>18:00</td>
+                            <td>1/32 финала</td>
+                        </tr>
+                        <tr>
+                            <td>22 мая</td>
+                            <td>18:00</td>
+                            <td>1/16 финала</td>
+                        </tr>
+                        <tr>
+                            <td>23 мая</td>
+                            <td>18:00</td>
+                            <td>1/8 финала</td>
+                        </tr>
+                        <tr>
+                            <td>24 мая</td>
+                            <td>18:00</td>
+                            <td>1/4 финала</td>
+                        </tr>
+                        <tr>
+                            <td>25 мая</td>
+                            <td>12:00</td>
+                            <td>1/2 финала</td>
+                        </tr>
+                        <tr>
+                            <td>25 мая</td>
+                            <td>14:00</td>
+                            <td>Финал<br> Торжественное церемония закрытия турнира
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <ul class="footer__social">
+            <li><a href="#" title="ВКонтакте"><i class="fab fa-vk myfont-footer"></i></a></li>
+            <li><a href="#" title="Одноклассники"><i class="fab fa-odnoklassniki myfont-footer"></i></a></li>
+            <li><a href="#" title="Facebook"><i class="fab fa-facebook-f myfont-footer"></i></a></li>
+            <li><a href="#" title="Viber"><i class="fab fa-viber myfont-footer"></i></a></li>
+            <li><a href="#" title="Telegram"><i class="fab fa-telegram-plane myfont-footer"></i></a></li>
+        </ul>
+        <p class="footer__copy">&copy; Minsk Open 2019 </p>
+    </footer>
+</body>
+
+
+</html>

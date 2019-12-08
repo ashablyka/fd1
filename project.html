@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table tennis</title>
+    <style>
+        body, ul {
+            margin: 0;
+            padding: 0;
+        }
+        .page {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .header {
+            background: #E9967A;
+        }
+        .logo {
+            width: 140px;
+            height: 120px;
+            float: left;
+            outline: 1px solid black;
+        }
+        .header__upper {
+            width: calc(100% - 140px);
+            height: 50px;
+            float: right;
+            outline: 1px solid black;
+        }
+        .nav {
+            width: calc(100% - 140px);
+            float: right;
+            height: 70px;
+            outline: 1px solid black;
+        }
+        .nav__list {
+            list-style: none;
+        }
+        .nav__item {
+            float: left;
+        }
+        .clear {
+            clear: both;
+        }
+        .main {
+            height: 1000px;
+            background: #98FB98;
+        }
+        .footer {
+            height: 150px;
+            background: #5F9EA0;  
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="logo"><a href="#">Лого</a></div>
+            <div class="header__upper"><a href="#">Регистрация</a></div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#">Новости</a></li>
+                    <li class="nav__item"><a href="#">Турниры</a>
+                        <ul class="nav__sublist">
+                            <li>Регистрация</li>
+                            <li>Расписание</li>
+                            <li>Результаты</li>
+                            <li>Фото</li>  
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="#">Информация</a>
+                        <ul class="nav__sublist">
+                            <li>Положение</li>
+                            <li>Программа</li>
+                            <li>Место проведения</li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="clear"></div>
+        </header> 
+        <main class="main"></main>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>

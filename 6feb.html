@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+<div onClick = "ClickF('Привет')">Кликни меня</div>
+  <script>
+    function ClickF(str) {
+      alert(str);
+      console.log(this);
+    }
+  </script>
+</body>
+</html>
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+<div id = "some" onClick = "ClickF('Привет')">Кликни меня</div>
+  <script>
+    function ClickF() {
+      alert('Привет');
+      this.onclick = function() {
+        alert('И снова привет');
+      }
+    }
+  </script>
+</body>
+</html>-->
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+<div id = "some" onClick = "ClickF('Привет')">Кликни меня</div>
+  <script>
+    function ClickF() {
+      alert('Привет');
+      some.onclick = function() {
+        alert('И снова привет');
+      }
+    }
+  </script>
+</body>
+</html>-->

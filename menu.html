@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        nav {
+            width: 100vw;
+            height: 40px;
+            border-radius: 7px;
+            min-width: 400px;
+            background: linear-gradient(gray, cyan);
+            padding-top: 1px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 5px;
+        }
+
+        li {
+            float: left;
+            padding-left: 4px;
+        }
+
+        li:hover {
+            border-bottom: 1px solid blue;
+        }
+        
+        li::after {
+            content: "|";
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">О компании</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
